@@ -1,0 +1,22 @@
+﻿<Window x:Class="GameLibary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameLibary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="142,96,130,98">
+            <ComboBox Width="225" Height="25" SelectionChanged="ComboBox_SelectionChanged" Margin="10">
+                <ComboBoxItem>Space Invaders</ComboBoxItem>
+                <ComboBoxItem>Geisterstunde</ComboBoxItem>
+                <ComboBoxItem>Mäuserennen</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="BuyButton" Content="Buy" IsEnabled="{Binding BuyEnabled}"/>
+            <Button x:Name="DownloadButton" Content="Download" IsEnabled="{Binding DownloadEnabled}"/>
+            <Button x:Name="InstallButton" Content="Install" IsEnabled="{Binding InstallEnabled}"/>
+            <Button x:Name="PlayButton" Content="Play" IsEnabled="{Binding PlayEnabled}"/>
+        </StackPanel>
+    </Grid>
+</Window>
